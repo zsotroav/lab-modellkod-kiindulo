@@ -13,7 +13,7 @@ public class SoundCard
 
     public double GetPrice()
     {
-        return yearOfCreation < (DateTime.Today.Year - 4) ? 0 : newPrice - (DateTime.Today.Year - yearOfCreation) * 2000;
+        return yearOfCreation < (DateTime.Today.Year - 4) ? 0 : Math.Max(0 newPrice - (DateTime.Today.Year - yearOfCreation) * 2000);
     }
 
     public int GetAge()

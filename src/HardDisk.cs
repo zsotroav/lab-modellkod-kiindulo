@@ -15,7 +15,7 @@ public class HardDisk
 
     public double GetPrice()
     {
-        return yearOfCreation < (DateTime.Today.Year - 4) ? 0 : newPrice - (DateTime.Today.Year - yearOfCreation) * 5000;
+        return yearOfCreation < (DateTime.Today.Year - 4) ? 0 : Math.Max(0, newPrice - (DateTime.Today.Year - yearOfCreation) * 5000);
     }
 
     public int GetAge()
